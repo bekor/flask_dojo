@@ -28,7 +28,8 @@ def get_counter():
 
 @app.route("/request-counter", methods=["POST"])
 def post_counter():
-    pass
+    COUNTS["POST"] += 1
+    return redirect("/")
 
 
 if __name__ == '__main__':
